@@ -1,24 +1,44 @@
-.App {
-  text-align: center;
+.wrapper {
+    width: 100%;
+    background-color: #F4F4F4;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.wrapper-header {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: thin solid gray;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.wrapper-main {
+    box-sizing: border-box;
+    width: 100%;
 }
-
-.App-intro {
-  font-size: large;
+.container {
+    box-sizing: border-box;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: thin solid gray;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.counter {
+    box-sizing: border-box;
+    width: 320px;
+    border: .5rem solid gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+.goal {
+    box-sizing: border-box;
+    width: 220px;
+    border: .2rem solid gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comments {
+    box-sizing: border-box;
+    width: 380px;
+    border: .2rem solid red;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comment {
+    width: 100%;
 }

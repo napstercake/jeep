@@ -1,44 +1,111 @@
+html { 
+  background: url(./assets/img/jeep2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .wrapper {
     width: 100%;
-    background-color: #F4F4F4;
 }
-.wrapper-header {
-    box-sizing: border-box;
-    width: 100%;
-    border-bottom: thin solid gray;
+
+.clear {
+    clear: both;
 }
+
+/* Nav */
+.nav {
+    margin: 0 1rem;
+}
+
+.donate{
+    background-color: #f70b0b;
+    border-radius: 1rem;
+    color: white;
+    padding: .5rem;
+    border: thin solid #f70b0b;
+    font-size: .8rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    display: block;
+    padding: .5rem;
+    color: #a7a7a7;
+    text-decoration: none;
+}
+.donate {
+    background-color: red;
+    border-radius: 1rem;
+    color: white;
+    padding: .5rem;
+}
+/**/
 .wrapper-main {
     box-sizing: border-box;
     width: 100%;
+    color: #F2F2F2;
+    margin-top: 5rem;
 }
 .container {
     box-sizing: border-box;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    border: thin solid gray;
 }
 .counter {
     box-sizing: border-box;
     width: 320px;
-    border: .5rem solid gray;
-    margin-left: auto;
-    margin-right: auto;
+    border: .5rem solid #b9b9b9;
+    border-radius: 3rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: right;
+    font-weight: bold;
+    font-size: 2rem;
 }
 .goal {
     box-sizing: border-box;
     width: 220px;
     border: .2rem solid gray;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: .5rem;
+    text-align: right;
+    color: #bfbfbf;
 }
 .comments {
     box-sizing: border-box;
     width: 380px;
-    border: .2rem solid red;
+    margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
+    border: thin solid #737373;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, 0.31);
+    height: 300px;
+    overflow: auto;
 }
 .comment {
     width: 100%;
+    padding: .5rem 0;
+    border-bottom: thin solid #5d5d5d;
+    font-size: .8rem;
 }

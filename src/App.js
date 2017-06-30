@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 // CSS
 import './App.css';
 
-class App extends Component {
+// Components
+import { Donate   } from './components/donate/Donate';
+import { Counter  } from './components/counter/Counter';
+
+class App extends React.Component {
+
   render() {
     return (
       <div className="wrapper">
         <nav className="nav">
-          <button className="donate">Donate</button>
+          <Donate add={() => this.props.addAmount(10)}></Donate>
           <ul>
             <li><a href="">About me</a></li>
           </ul>
@@ -17,9 +23,7 @@ class App extends Component {
         <div className="wrapper-main">
           <main>
             <div className="container">
-              <div className="counter">
-                $ 1.45
-              </div>
+              <Counter amount={this.props.amountApp.amount}></Counter>
               <div className="goal">
                 $ 27,000.00
               </div>
@@ -94,4 +98,22 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    amountApp: state.amount,
+    commentApp: state.comment
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addAmount: (quantity) => {
+      dispatch({
+        type: 'ADD_AMOUNT',
+        payload: quantity
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

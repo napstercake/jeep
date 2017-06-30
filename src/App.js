@@ -7,6 +7,8 @@ import './App.css';
 // Components
 import { Donate   } from './components/donate/Donate';
 import { Counter  } from './components/counter/Counter';
+import { Comments } from './components/comment/Comments';
+import { Comment  } from './components/comment/Comment';
 
 class App extends React.Component {
 
@@ -27,84 +29,30 @@ class App extends React.Component {
               <div className="goal">
                 $ 27,000.00
               </div>
-              <div className="comments">
-                <div className="comment">
-                  Hope you get it!
-                </div>
-                <div className="comment">
-                  Stupid idea, still works! :)
-                </div>
-                <div className="comment">
-                  Give me a ride
-                </div>
-                <div className="comment">
-                  Hope yo will get it
-                </div>
-                <div className="comment">
-                  rocks!
-                </div>
-                <div className="comment">
-                  Hope you get it!
-                </div>
-                <div className="comment">
-                  Stupid idea, still works! :)
-                </div>
-                <div className="comment">
-                  Give me a ride
-                </div>
-                <div className="comment">
-                  Hope yo will get it
-                </div>
-                <div className="comment">
-                  rocks!
-                </div>
-                <div className="comment">
-                  Hope you get it!
-                </div>
-                <div className="comment">
-                  Stupid idea, still works! :)
-                </div>
-                <div className="comment">
-                  Give me a ride
-                </div>
-                <div className="comment">
-                  Hope yo will get it
-                </div>
-                <div className="comment">
-                  rocks!
-                </div>
-                <div className="comment">
-                  Hope you get it!
-                </div>
-                <div className="comment">
-                  Stupid idea, still works! :)
-                </div>
-                <div className="comment">
-                  Give me a ride
-                </div>
-                <div className="comment">
-                  Hope yo will get it
-                </div>
-                <div className="comment">
-                  rocks!
-                </div>
-              </div>
+              <Comments commentsList={this.props.commentsApp.comments}></Comments>
             </div>
           </main>
           </div>
-      </div>  
-      
+      </div>
     );
   }
 }
 
+/**
+ * 
+ * @param {*} state 
+ */
 const mapStateToProps = (state) => {
   return {
     amountApp: state.amount,
-    commentApp: state.comment
+    commentsApp: state.comments
   }
 }
 
+/**
+ * 
+ * @param {*} dispatch 
+ */
 const mapDispatchToProps = (dispatch) => {
   return {
     addAmount: (quantity) => {

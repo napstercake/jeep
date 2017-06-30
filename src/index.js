@@ -31,16 +31,17 @@ const amountReducer = (state = {
  * @param {*} state 
  * @param {*} action 
  */
-const commentReducer = (
+const commentsReducer = (
   state = {
-    comment: "this is the first comment"
+    comments: ["this is the first comment", "this is the #2 comment", "this is #3 comment"]
   }, action) => {
     switch (action.type) {
       case 'ADD_COMMENT':
         state = {
           ...state,
-          comment: action.payload
+          comments: state.comments.push("test")
         }
+      break;
     }
     return state;
   }
@@ -49,7 +50,7 @@ const commentReducer = (
  * 
  */
 const appStore = createStore(
-  combineReducers({amount: amountReducer, comment: commentReducer})
+  combineReducers({amount: amountReducer, comments: commentsReducer})
 );
 
 /**

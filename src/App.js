@@ -10,6 +10,9 @@ import { Counter  } from './components/counter/Counter';
 import { Comments } from './components/comment/Comments';
 import { Comment  } from './components/comment/Comment';
 
+// Actions
+import { addAmount } from './actions/amountActions';
+
 class App extends React.Component {
 
   render() {
@@ -56,10 +59,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addAmount: (quantity) => {
-      dispatch({
-        type: 'ADD_AMOUNT',
-        payload: quantity
-      })
+      dispatch(addAmount(quantity))
     }
   }
 }
